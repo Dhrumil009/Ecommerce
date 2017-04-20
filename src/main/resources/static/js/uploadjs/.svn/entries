@@ -1,0 +1,52 @@
+8
+
+dir
+25
+https://192.168.1.126/svn/texonlabs/DMS/trunk/base/DocManagement/WebContent/js/uploadjs
+https://192.168.1.126/svn/texonlabs
+
+
+
+2014-11-08T10:23:12.824033Z
+25
+chirag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+edcae1f6-4d19-6746-8d26-df58d9621191
+
+googlejquery.js
+file
+
+
+
+
+2014-11-06T12:08:14.000000Z
+d5a9368f4144544f74e8fd7be5a584ff
+2014-11-08T10:23:12.824033Z
+25
+chirag
+
+jquery.min.js
+file
+
+
+
+
+2014-11-06T12:08:14.000000Z
+d4a20d75db01a33e2d65e303ce5c34f3
+2014-11-08T10:23:12.824033Z
+25
+chirag
+

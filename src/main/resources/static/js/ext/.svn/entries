@@ -1,0 +1,40 @@
+8
+
+dir
+14
+https://192.168.1.126/svn/texonlabs/IntranetPortal/trunk/base/ChatMail/WebContent/js/ext
+https://192.168.1.126/svn/texonlabs
+
+
+
+2014-11-08T08:19:51.272532Z
+14
+chirag
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+edcae1f6-4d19-6746-8d26-df58d9621191
+
+CalendarJquery-1.9.1.js
+file
+
+
+
+
+2014-11-07T10:45:15.000000Z
+188fbd1049b8b0a2ba4208ea0cf6b2ff
+2014-11-08T08:19:51.272532Z
+14
+chirag
+
