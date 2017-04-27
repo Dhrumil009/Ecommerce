@@ -7,57 +7,62 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity
+@Entity(name="user")
 public class User {
 	
 
 	@Id
-	@Column(name = "UserID",unique = true, nullable = false)
+	@Column(name = "userid",unique = true, nullable = false)
 	@GeneratedValue
 	private Integer UserID;
 	
-	@Column(name="UserEmail")
-	private String UserEmail;
+	@Column(name = "useremail")
+	private String UserEmail="";
 	
-	@Column(name="UserPassword")
-	private String UserPassword;
+	@Column(name = "userpassword")
+	private String UserPassword="";
 	
-	@Column(name="UserFirstName")
-	private String UserFirstName;
+	@Column(name = "userfirstname")
+	private String UserFirstName="";
 	
-	@Column(name="UserLastName")
-	private String UserLastName;
+	@Column(name = "userlastname")
+	private String UserLastName="";
 	
-	@Column(name="UserAddress")
-	private String UserAddress;
+	@Column(name = "useraddress" )
+	private String UserAddress="";
 	
-	@Column(name="UserAddress2")
-	private String UserAddress2;
+	@Column(name = "useraddress2")
+	private String UserAddress2="";
 	
-	@Column(name="UserCity")
-	private String UserCity;
+	@Column(name = "usercity")
+	private String UserCity="";
 	
-	@Column(name="UserState")
-	private String UserState;
+	@Column(name = "userstate")
+	private String UserState="";
 	
-	@Column(name="UserCountry")
-	private String UserCountry;
+	@Column(name = "usercountry")
+	private String UserCountry="";
 	
-	@Column(name="UserZip")
-	private String UserZip;
+	@Column(name = "userzip")
+	private String UserZip="";
 	
-	@Column(name="UserPhone")
-	private String UserPhone;
+	@Column(name = "userphone")
+	private String UserPhone="";
 	
-	@Column(name="UserEmailVerified")
+	@Column(name = "useremailverified")
 	private boolean UserEmailVerified;
 	
-	@Column(name="UserRegistrationDate")
-	private Date UserRegistrationDate;
+	@Column(name = "userregistrationdate")
+	private Date UserRegistrationDate=new Date();
 	
-	@Column(name="UserVerificationCode")
+	@Column(name = "userverificationcode")
 	private boolean UserVerificationCode;
 	
+	@Column(name = "usertype")
+	private boolean UserType;
+	
+	@Column(name = "image")
+	private String  Image="";
 
 	public Integer getUserID() {
 		return UserID;
@@ -178,6 +183,23 @@ public class User {
 	public void setUserVerificationCode(boolean userVerificationCode) {
 		UserVerificationCode = userVerificationCode;
 	}
+	
+
+	public boolean isUserType() {
+		return UserType;
+	}
+
+	public void setUserType(boolean userType) {
+		UserType = userType;
+	}
+
+	public String getImage() {
+		return Image;
+	}
+
+	public void setImage(String image) {
+		Image = image;
+	}
 
 	@Override
 	public String toString() {
@@ -186,8 +208,13 @@ public class User {
 				+ ", UserAddress2=" + UserAddress2 + ", UserCity=" + UserCity + ", UserState=" + UserState
 				+ ", UserCountry=" + UserCountry + ", UserZip=" + UserZip + ", UserPhone=" + UserPhone
 				+ ", UserEmailVerified=" + UserEmailVerified + ", UserRegistrationDate=" + UserRegistrationDate
-				+ ", UserVerificationCode=" + UserVerificationCode + "]";
+				+ ", UserVerificationCode=" + UserVerificationCode + ", UserType=" + UserType + ", Image=" + Image
+				+ "]";
 	}
+
+
+	
+	
 
 	
 	

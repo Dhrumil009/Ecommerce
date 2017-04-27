@@ -31,7 +31,7 @@
 	    <div class="col-md-4 col-md-offset-4 m-t-lg">
 	      <section class="panel">
 	        <header class="panel-heading bg bg-primary text-center"> 
-	        	Sign up &nbsp;&nbsp;| &nbsp;&nbsp;<a href="index.html" title="" rel="nofollow">Home</a> <br/>
+	        	Sign up &nbsp;&nbsp;| &nbsp;&nbsp;<a href="index" title="" rel="nofollow">Home</a> <br/>
 	        	<% String msg=(String) request.getAttribute("msg");
 		               if(msg==null){
 		            	   msg="";
@@ -42,16 +42,13 @@
 				<%=msg%>	
 	        </header>
 		        <form action="addUser" method="post" class="panel-body" enctype="multipart/form-data" >
-		          <div class="form-group">
-		            <label class="control-label">Your User Name</label>
-		            <input type="text" placeholder="User Name" class="form-control" name="userName"  id="userName" required onblur="checkuser();" >
-		             <div id="msg" style=" display: none; color:red;">
-	       					 			
-	       			 </div>
+		           <div class="form-group">
+			            <label class="control-label">Your email address</label>
+			            <input type="email" placeholder="test@example.com" class="form-control" name="UserEmail" required>
 		          </div>
 		          <div class="form-group">
 		            <label class="control-label">Type a password</label>
-		            <input type="password" id="password" placeholder="Password" class="form-control" name="password" required onblur="passwordChanged();" >
+		            <input type="password" id="password" placeholder="Password" class="form-control" name="UserPassword" required onblur="passwordChanged();" >
 		            	<div id="msg2" style=" display: none; color:red;">
 	       					 			
 	       			 </div>
@@ -67,12 +64,8 @@
 	       			 </div>
 		          </div>
 		          <div class="form-group">
-		            <label class="control-label">Your email address</label>
-		            <input type="email" placeholder="test@example.com" class="form-control" name="email" required>
-		          </div>
-		          <div class="form-group">
 		            <label class="control-label">Your Logo or Image</label>
-		            <input type="file" class="btn btn-file btn-s-xs" placeholder='Upload' name="fileUpload" /> 
+		            <input type="file" class="btn btn-file btn-s-xs" placeholder='Upload' name="file" /> 
 		          </div>
 		          <div class="checkbox">
 		            <label>
@@ -83,7 +76,7 @@
 		          <button type="submit" class="btn btn-info" id="sg">Sign up</button>
 		          <div class="line line-dashed"></div>
 		          <p class="text-muted text-center"><small>Already have an account?</small></p>
-		          <a href="Login.jsp" class="btn btn-white btn-block">Sign in</a>
+		          <a href="login" class="btn btn-white btn-block">Sign in</a>
         		</form>
 	      </section>
 	    </div>
