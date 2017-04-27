@@ -29,7 +29,7 @@
     <div class="header_bg">
       <header id="header" class="container ">
         <div id="header-inner"> <a id="header_logo" href="#" title="Bikes"> <img class="logo" src="images/welcomeweek-banner.png" alt="Bikes" width="104" height="91"/> </a>
-          <section class="blockuserinfo header-box"> <a href="Login.jsp" title="" class="login" rel="tooltip" data-original-title="Login" data-placement="bottom"><span><i class="fa fa-lock"></i></span></a> </section>
+          <section class="blockuserinfo header-box"> <a href="login" title="" class="login" rel="tooltip" data-original-title="Login" data-placement="bottom"><span><i class="fa fa-lock"></i></span></a> </section>
           <section id="header_user" class="blockuserinfo-cart header-box">
             <div id="shopping_cart"> <a href="#" title="View my shopping cart" rel="nofollow"> <strong class="opancart"></strong> <span class="shopping_cart_title">Cart:</span> <span class="ajax_cart_quantity hidden">0</span> <span class="ajax_cart_no_product">(empty)</span> </a> </div>
           </section>
