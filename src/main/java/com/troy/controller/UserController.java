@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import com.troy.domain.User;
 import com.troy.service.EmailService;
@@ -64,7 +65,7 @@ public class UserController {
 						new FileOutputStream(serverFile));
 				stream.write(bytes);
 				stream.close();
-				user.setImage(user.getUserID()+file.getOriginalFilename());
+				user.setImage("usrimg/"+user.getUserID()+file.getOriginalFilename());
 				userServie.addUser(user);
 				
 			} catch (Exception e) {
@@ -98,7 +99,7 @@ public class UserController {
 					}
 				}else{
 					session.setAttribute("user", user);
-					model=new ModelAndView("webtool");
+					model=new ModelAndView("webtools");
 				}
 				
 			}else{
@@ -109,5 +110,16 @@ public class UserController {
 		
 		return model;
 	}
+	
+	
+	@RequestMapping("/doLogout")
+	public RedirectView doLogout(HttpSession session){
+		RedirectView model = new RedirectView("login");
+		session.removeAttribute("user");
+		session.invalidate();
+		return model;
+	}
+	
+	
 	
 }

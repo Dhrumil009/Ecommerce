@@ -14,11 +14,11 @@ public class Catalog {
 	private Integer CatalogID;
 	
 	@Column(name = "catalogname")
-	private String CatalogName;
+	private String CatalogName="";
 	@Column(name = "catalogdesc")
-	private String CatalogDesc;
+	private String CatalogDesc="";
 	@Column(name = "catalogimage")
-	private String CatalogImage;
+	private String CatalogImage="";
 	
 	public Integer getCatalogID() {
 		return CatalogID;
