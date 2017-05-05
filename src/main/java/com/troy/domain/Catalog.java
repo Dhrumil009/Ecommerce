@@ -11,45 +11,49 @@ public class Catalog {
 	@Id
 	@Column(unique = true, nullable = false,name="catalogid")
 	@GeneratedValue
-	private Integer CatalogID;
+	private Integer catalogID;
 	
 	@Column(name = "catalogname")
-	private String CatalogName="";
+	private String catalogName="";
 	@Column(name = "catalogdesc")
-	private String CatalogDesc="";
+	private String catalogDesc="";
 	@Column(name = "catalogimage")
-	private String CatalogImage="";
+	private String catalogImage="";
+	
 	
 	public Integer getCatalogID() {
-		return CatalogID;
+		return catalogID;
 	}
 	public void setCatalogID(Integer catalogID) {
-		CatalogID = catalogID;
+		this.catalogID = catalogID;
 	}
 	public String getCatalogName() {
-		return CatalogName;
+		return catalogName;
 	}
 	public void setCatalogName(String catalogName) {
-		CatalogName = catalogName;
+		this.catalogName = catalogName;
 	}
 	public String getCatalogDesc() {
-		return CatalogDesc;
+		return catalogDesc;
 	}
 	public void setCatalogDesc(String catalogDesc) {
-		CatalogDesc = catalogDesc;
+		this.catalogDesc = catalogDesc;
 	}
 	public String getCatalogImage() {
-		return CatalogImage;
+		return catalogImage;
 	}
 	public void setCatalogImage(String catalogImage) {
-		CatalogImage = catalogImage;
-	}
-	@Override
-	public String toString() {
-		return "Catalog [CatalogID=" + CatalogID + ", CatalogName=" + CatalogName + ", CatalogDesc=" + CatalogDesc
-				+ ", CatalogImage=" + CatalogImage + "]";
+		this.catalogImage = catalogImage;
 	}
 	
+	
+	@Override
+	public String toString() {
+		return "Catalog [catalogID=" + catalogID + ", catalogName=" + catalogName + ", catalogDesc=" + catalogDesc
+				+ ", catalogImage=" + catalogImage + "]";
+	}
+	
+
 	
 
 

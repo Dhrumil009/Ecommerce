@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+ <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE HTML>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 " lang="en"> <![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
@@ -32,17 +33,34 @@
       <header id="header" class="container ">
         <div id="header-inner"> 
         	<a id="header_logo" href="#" title="Bikes"> <img class="logo" src="images/welcomeweek-banner.png" alt="Bikes" width="104" height="91"/> </a>
-<%--         		<c:if  test="${not empty user}" > --%>
+        		
+        			  <c:if  test="${empty user}" >
 	        			<section class="blockuserinfo header-box"> 
-			          		<a href="login" title="" class="login" rel="tooltip" data-original-title="Login" data-placement="bottom"><span><i class="fa fa-lock"></i></span></a> 
+			          		<a href="login" title="" class="login" rel="tooltip" data-original-title="Login" data-placement="bottom"><span><img src="img/logintroy.png"  title="login"></img></span></a> 
 			          	</section>
-			          	   <section id="header_user" class="blockuserinfo-cart header-box">
-			            <div id="shopping_cart"> <a href="#" title="View my shopping cart" rel="nofollow"> <strong class="opancart"></strong> <span class="shopping_cart_title">Cart:</span> <span class="ajax_cart_quantity hidden">0</span> <span class="ajax_cart_no_product">(empty)</span> </a> </div>
-			          </section>
-			          <div id="your_account">
-			          		<a href="signup" title="" rel="nofollow">Sign UP</a>
-			          </div>
-<%--         		</c:if> --%>
+			          </c:if>	
+				         <section id="header_user" class="blockuserinfo-cart header-box">
+				            	<div id="shopping_cart">
+									<a href="cart" title="View my shopping cart" rel="nofollow"> 
+										<strong class="opancart"></strong> <span class="shopping_cart_title">Cart:</span> 
+										<c:if test="${not empty  cart}"> <span class="ajax_cart_no_product">( ${fn:length(cart)} )</span> </c:if>
+										<c:if test="${empty  cart}"> <span class="ajax_cart_no_product">(empty)</span> </c:if>
+									</a> 
+								</div>
+				          </section>
+				      <c:if  test="${not empty user}" >
+					    <section class="blockuserinfo header-box"> 
+			          		<a href="doLogout" title="logout" class="login" rel="tooltip" data-original-title="Login" data-placement="bottom"><span><img src="img/logout.jpg"></img></span></a> 
+			          	</section>
+			          	 <div id="your_account">
+				          		<a href="#" title="" rel="nofollow">Welcome ${user.userFirstName}</a>
+				          </div>
+				      </c:if>
+			          <c:if  test="${empty user}" >
+				          <div id="your_account">
+				          		<a href="signup" title="" rel="nofollow">Sign UP</a>
+				          </div>
+        			 </c:if>	
 <%--         		<c:if  test="${empty user}" > --%>
         			 
 			       
@@ -52,22 +70,10 @@
             <div id="menu-trigger">Categories<span class="menu-icon"></span></div>
             <ul id="menu-custom">
               <li><a href="/">Home</a></li>
-              <li><a href="#">About</a>
-                <ul>
-                  <li><a href="#">Our Story</a></li>
-                  <li><a href="#">Innovation</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Gallary</a>
-                <ul>
-                  <li><a href="#">Photos</a></li>
-                  <li><a href="#">Video</a></li>
-                </ul>
-              </li>
+              <li><a href="aboutus">About</a></li>
               <li><a href="#">Events</a></li>
-              <li><a href="products">Product</a> </li>
               <li><a href="contact">Contact</a></li>
+              <c:if  test="${not empty user}" ><li><a href="profile">Profile</a></li></c:if>
             </ul>
           </div>
           <section id="cart_block" class="block column_box exclusive">

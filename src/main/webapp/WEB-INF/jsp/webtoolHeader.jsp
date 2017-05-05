@@ -69,12 +69,12 @@
    			<section>
 		    <nav class="nav-primary hidden-xs" data-ride="collapse">
 				 <ul class="nav">
-					<li>
-						<a href="webtools" >
-							 <i class="fa fa fa-dashboard "></i> 
-							 <span>Dashboard</span>
-						</a>
-					</li>
+<!-- 					<li> -->
+<!-- 						<a href="webtools" > -->
+<!-- 							 <i class="fa fa fa-dashboard "></i>  -->
+<!-- 							 <span>Dashboard</span> -->
+<!-- 						</a> -->
+<!-- 					</li> -->
 					<li >
 						<a href="catalog" >
 							<i class="fa fa-folder"></i> 

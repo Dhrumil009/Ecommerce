@@ -171,8 +171,6 @@ public class WebtoolController {
 	
 	@RequestMapping("/addProduct")
 	public RedirectView  addProduct(@ModelAttribute("product") Product product,@RequestParam("file") MultipartFile file){
-		System.out.println("Hello");
-		System.out.println("hi"+product);
 		product=webtool.AddProduct(product);
 		
 		if (product != null && !file.isEmpty()) {

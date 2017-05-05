@@ -12,4 +12,7 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
 
 //	@Query("SELECT TOP 8 * FROM product")
 //	List<Product> findTop8();
+	
+	public List<Product> findByproductLive(Integer productLive);
+	public List<Product> findByproductCategoryID(Integer CategoryId);
 }

@@ -44,7 +44,7 @@ public class Product {
 	private Float productQuantity;
 	
 	@Column(name ="productlive")
-	private Integer ProductLive=1;
+	private Integer productLive=0;
 	
 	
 
@@ -139,11 +139,11 @@ public class Product {
 	}
 
 	public Integer getProductLive() {
-		return ProductLive;
+		return productLive;
 	}
 
 	public void setProductLive(Integer productLive) {
-		ProductLive = productLive;
+		this.productLive = productLive;
 	}
 
 	@Override
@@ -152,7 +152,7 @@ public class Product {
 				+ ", productWeight=" + productWeight + ", productCartDesc=" + productCartDesc + ", productShortDesc="
 				+ productShortDesc + ", productLongDesc=" + productLongDesc + ", productThumb=" + productThumb
 				+ ", productImage=" + productImage + ", productCategoryID=" + productCategoryID + ", productQuantity="
-				+ productQuantity + ", ProductLive=" + ProductLive + "]";
+				+ productQuantity + ", ProductLive=" + productLive + "]";
 	}
 
 	

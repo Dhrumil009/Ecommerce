@@ -64,6 +64,17 @@
 			             	<br/>
 			             	<div class="line line-dashed line-lg pull-in"></div>
 			             	<div class="form-group"> 
+			             		<label class="col-sm-3 control-label"><strong>Promotional products</strong></label> 
+			             		<div class="col-sm-6 m-b">
+			             			<select name="productLive" id="productLive">
+			             				<option value="0">Non Promotional</option>
+			             				<option value="1">Promotional</option>
+			             			</select>
+			             		</div> 
+			             	</div>
+			             	<br/>
+			             	<div class="line line-dashed line-lg pull-in"></div>
+			             	<div class="form-group"> 
 			             		<label class="col-sm-3 control-label"><strong>Product Image</strong></label> 
 			             		<div class="col-sm-6 m-b">
 			             		<input type="file"  name="file" cssClass="form-control"  id="CatalogName" />
@@ -122,7 +133,7 @@
 												<td><b> ${item.productPrice} </b></td>
 												<td><b> ${item.productQuantity} </b></td>
 												<td><b> ${item.productCartDesc} </b></td>
-												<td><b><a onclick="editProduct('${item.productID}','${item.productName}','${item.productPrice}','${item.productQuantity}','${item.productWeight}','${item.productCartDesc}','${item.productShortDesc}','${item.productLongDesc}','${item.productCategoryID}')">Edit</a></b></td>
+												<td><b><a onclick="editProduct('${item.productID}','${item.productName}','${item.productPrice}','${item.productQuantity}','${item.productWeight}','${item.productCartDesc}','${item.productShortDesc}','${item.productLongDesc}','${item.productCategoryID}','${item.productLive}')">Edit</a></b></td>
 												<td><b><a href="Deleteproduct?productID=${item.productID}" >Delete</a></b></td>
 										   </tr>
 										</c:forEach>
@@ -155,7 +166,7 @@
 				
 			}
 			
-			function editProduct(productID,productName,productPrice,productStock,productWeight,productCartDesc,productShortDesc,productLongDesc,productCategoryID){
+			function editProduct(productID,productName,productPrice,productStock,productWeight,productCartDesc,productShortDesc,productLongDesc,productCategoryID,productLive){
 				$('#productID').val(productID);
 				$('#productName').val(productName);
 				$('#productPrice').val(productPrice);
@@ -165,6 +176,7 @@
 				$('#productShortDesc').val(productShortDesc);
 				$('#productLongDesc').val(productLongDesc);
 				$('#productCategoryID').val(productCategoryID);
+				$('#productLive').val(productLive);
 				 load1Div();
 			}
 </script>

@@ -7,6 +7,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Login|Troy E-commerce</title>
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<link rel="stylesheet" href="css/app.v2.css" type="text/css" />
 		<link rel="stylesheet" href="css/font.css" type="text/css" cache="false" />

@@ -18,6 +18,7 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import com.troy.domain.User;
 import com.troy.service.EmailService;
+import com.troy.service.FrontEndService;
 import com.troy.service.UserService;
 
 @Controller
@@ -27,10 +28,16 @@ public class UserController {
 	private UserService userServie;
 	@Autowired
 	public EmailService emailService;
+	@Autowired
+	FrontEndService service;
 	
 	@RequestMapping("/index")
-	public String index(){
-		return "index";
+	public ModelAndView index(){
+		ModelAndView model=new ModelAndView("index");
+		model.addObject("catalogList", service.getAllCatalog());
+		model.addObject("productList", service.getProductbyLive(1));
+		model.addObject("bodyType", "index");
+		return model;
 	}
 	
 	@RequestMapping("/login")
@@ -74,7 +81,7 @@ public class UserController {
 			
 			String mailContent="Hello";
 			
-			emailService.sendMail(user.getUserEmail(), "Welcome to Troy Ecommerce "+user.getUserFirstName(),mailContent );
+//			emailService.sendMail(user.getUserEmail(), "Welcome to Troy Ecommerce "+user.getUserFirstName(),mailContent );
 			
 		} 
 		
@@ -114,7 +121,7 @@ public class UserController {
 	
 	@RequestMapping("/doLogout")
 	public RedirectView doLogout(HttpSession session){
-		RedirectView model = new RedirectView("login");
+		RedirectView model = new RedirectView("/");
 		session.removeAttribute("user");
 		session.invalidate();
 		return model;

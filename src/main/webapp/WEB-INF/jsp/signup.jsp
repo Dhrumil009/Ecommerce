@@ -9,6 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<link rel="stylesheet" href="css/app.v2.css" type="text/css" />
 		<link rel="stylesheet" href="css/font.css" type="text/css" cache="false" />
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 		<script src="js/jquery.js"></script>
 			<script src="js/jquery-migrate-1.1.1.js"></script>
 			<script src="js/jquery.easing.1.3.js"></script>

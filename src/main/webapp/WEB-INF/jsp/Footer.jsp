@@ -54,5 +54,6 @@
 <script src="js/modernizr-2.5.3.min.js"></script> 
 <script src="js/jquery.carouFredSel-6.2.1.js"></script> 
 <script src="js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.wizard.js"></script>
 </body>
 </html>
