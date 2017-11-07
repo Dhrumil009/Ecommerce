@@ -226,6 +226,12 @@ public class FrontEndController {
 	}
 	
 	
+	@RequestMapping("/event")
+	public ModelAndView event(){
+		ModelAndView model=new ModelAndView("event");
+		return model;
+	}
+	
 	@RequestMapping("/updateProfile")
 	public ModelAndView updateProfile(HttpSession session,@ModelAttribute("user") User user){
 		User user1=(User)session.getAttribute("user");

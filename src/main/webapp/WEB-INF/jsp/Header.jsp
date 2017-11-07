@@ -71,7 +71,7 @@
             <ul id="menu-custom">
               <li><a href="/">Home</a></li>
               <li><a href="aboutus">About</a></li>
-              <li><a href="#">Events</a></li>
+              <li><a href="event">Events</a></li>
               <li><a href="contact">Contact</a></li>
               <c:if  test="${not empty user}" ><li><a href="profile">Profile</a></li></c:if>
             </ul>
